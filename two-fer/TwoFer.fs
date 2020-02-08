@@ -1,3 +1,6 @@
 ﻿module TwoFer
 
-let twoFer (input: string option): string = "One for you, one for me."
+let twoFer =
+    function
+    | None -> sprintf "One for you, one for me."
+    | Some input -> sprintf "One for %s, one for me." input
