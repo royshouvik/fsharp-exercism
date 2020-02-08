@@ -1,8 +1,6 @@
 ﻿module QueenAttack
 
-let (|SameCol|SameRow|Diagonal|None|) (pos1, pos2) =
-  let x1, y1 = pos1
-  let x2, y2 = pos2
+let (|SameCol|SameRow|Diagonal|None|) ((x1, y1), (x2, y2)) =
   if  x1 = x2 then
     SameCol
   elif y1 = y2 then
@@ -12,10 +10,10 @@ let (|SameCol|SameRow|Diagonal|None|) (pos1, pos2) =
   else
     None
 
+let isWithinBounds x = x >= 0 && x < 8
 
-let create (position: int * int) =
-    let x, y = position
-    x < 8 && x >= 0 && y < 8 && y >= 0
+let create (x, y) =
+    isWithinBounds x && isWithinBounds y
 
 let canAttack (queen1: int * int) (queen2: int * int) =
     match queen1, queen2 with
