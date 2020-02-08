@@ -40,25 +40,25 @@ let ``Can attack on same column``() =
     let blackQueen = (2, 5)
     canAttack blackQueen whiteQueen |> should equal true
 
-[<Fact(Skip = "Remove to run test")>]
+[<Fact>]
 let ``Can attack on first diagonal``() =
     let whiteQueen = (2, 2)
     let blackQueen = (0, 4)
     canAttack blackQueen whiteQueen |> should equal true
 
-[<Fact(Skip = "Remove to run test")>]
+[<Fact>]
 let ``Can attack on second diagonal``() =
     let whiteQueen = (2, 2)
     let blackQueen = (3, 1)
     canAttack blackQueen whiteQueen |> should equal true
 
-[<Fact(Skip = "Remove to run test")>]
+[<Fact>]
 let ``Can attack on third diagonal``() =
     let whiteQueen = (2, 2)
     let blackQueen = (1, 1)
     canAttack blackQueen whiteQueen |> should equal true
 
-[<Fact(Skip = "Remove to run test")>]
+[<Fact>]
 let ``Can attack on fourth diagonal``() =
     let whiteQueen = (1, 7)
     let blackQueen = (0, 6)
