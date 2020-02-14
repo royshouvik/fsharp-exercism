@@ -1,6 +1,7 @@
 ﻿module TwoFer
 
-let twoFer =
-    function
-    | None -> sprintf "One for you, one for me."
-    | Some input -> sprintf "One for %s, one for me." input
+
+let twoFer input =
+    input
+    |> Option.defaultValue "you"
+    |> sprintf "One for %s, one for me." // I could not figure out how to avoid using sprintf :(
